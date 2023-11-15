@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brigadeiros</title>
+    <link rel="stylesheet" href="css/Brigadeiros.css">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        BRIGADEIROS DA JUJU
+    </header>
+    <!--O comando <a> esta sendo usado para fazer os botões que irão navegar entre as paginas do site-->
+
+    <nav>
+        <a href="Inicio.html">Inicio</a>
+        <a href="Brigadeiros.html" class="pagina-atual">Brigadeiros</a>
+        <a href="q&a.html">Perguntas e Respostas</a>
+        <a href="blog.html">Blog</a>
+        <a href="contato.html">Sobre Nós</a>
+        <button id="toggle-cart">Carrinho</button>
+    </nav>
+
+    <h1> Brigadeiros
+    </h1>
+
+    <div class="tudo">
+
+        <div class="item" data-price="1.5" data-special="false">
+            <img src="imagens/brigadeirotrad.jpg" alt="Brigadeiro Tradicional">
+            <h2>Brigadeiro Tradicional</h2>
+            <p>R$ 1,50</p>
+            <input type="number" min="1" value="0">
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="item" data-price="2.5" data-special="false">
+            <img src="imagens/brigadeiro2.jpg" alt="Brigadeiro de Morango">
+            <h2>Brigadeiro de Morango</h2>
+            <p>R$ 2,50</p>
+            <input type="number" min="1" value="0">
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="item" data-price="2.0" data-special="false">
+            <img src="imagens/brigadeiro.amargo.jpg" alt="Brigadeiro Amargo">
+            <h2>Brigadeiro Meio Amargo</h2>
+            <p>R$ 2,00</p>
+            <input type="number" min="1" value="0">
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="item" data-price="3.0" data-special="false">
+            <img src="imagens/brigadeiro.paçoca.jpg" alt="Brigadeiro paçoca">
+            <h2>Brigadeiro de Paçoca</h2>
+            <p>R$ 3,00</p>
+            <input type="number" min="1" value="0">
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="item" data-price="3.0" data-special="false">
+            <img src="imagens/brigadeiro.limao.jpg" alt="Brigadeiro limao">
+            <h2>Brigadeiro de Limão</h2>
+            <p>R$ 3,00</p>
+            <input type="number" min="1" value="0">
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="item" data-price="3.5" data-special="false">
+            <img src="imagens/brigadeiro.cappuccino.jpg" alt="Brigadeiro cappuccino">
+            <h2>Brigadeiro de Cappuccino</h2>
+            <p>R$ 3,50</p>
+            <input type="number" min="1" value="0">
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="item" data-price="2.5" data-special="false">
+            <img src="imagens/brigadeiro.amendoim.jpg" alt="Brigadeiro amendoim">
+            <h2>Brigadeiro de Amendoim</h2>
+            <p>R$ 2,50</p>
+            <input type="number" min="1" value="0">
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="item" data-price="3.0" data-special="false">
+            <img src="imagens/brigadeiro.ninho.jpg" alt="Brigadeiro ninho">
+            <h2>Brigadeiro de Ninho</h2>
+            <p>R$ 3,00</p>
+            <input type="number" min="1" value="0">
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+
+        <div class="item" data-price="150.0" data-special="true">
+            <img src="imagens/brigadeiro.casamento.jpg" alt="Brigadeiro ninho">
+            <h2>Combo para casamentos</h2>
+            <p>R$150,00</p>
+            <input type="number" min="1" value="0">
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="item" data-price="100.0" data-special="true">
+            <img src="imagens/brigadeiro.festa.jpg" alt="Brigadeiro ninho">
+            <h2>Combo para festas</h2>
+            <p>R$100,00</p>
+            <input type="number" min="1" value="0">
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+    </div>
+
+    <div class="cart">
+        <h2>Carrinho</h2>
+        <ul class="cart-items">
+            <!-- Itens do carrinho aparecerão aqui -->
+        </ul>
+        <p>Total: <span class="total-price">R$ 0,00</span></p>
+    </div>
+
+
+    <script src="script.js"></script>
+
+    <footer>
+
+        <div>
+            <h3>Informações de Contato</h3>
+            <p>Endereço: Rua Exemplo, 123 - Cidade</p>
+            <p>Telefone: (11) 6521-6435</p>
+            <p>Email: exemplo@email.com</p>
+        </div>
+
+        <div>
+            <h3>Redes Sociais</h3>
+            <a href="https://www.facebook.com/?locale=pt_BR">Facebook</a>
+            <a href="https://twitter.com/home">Twitter</a>
+            <a href="https://www.instagram.com/">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleCartButton = document.getElementById('toggle-cart');
+            const cart = document.querySelector('.cart');
+
+            toggleCartButton.addEventListener('click', function () {
+                cart.classList.toggle('cart-visible');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
